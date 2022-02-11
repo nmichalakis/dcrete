@@ -1,0 +1,56 @@
+// Page: Content
+// -----------------------------------------------------------------------------
+.page__content {
+  .container {
+    position: relative;
+    overflow: hidden;
+  }
+
+}
+
+.user-pass,
+.user-register,
+.user-login {
+  .page__content {
+    min-height: calc(100vh - 300px);
+  }
+
+  .circle-teal {
+    position: fixed;
+    width: 100rem;
+    height: 100rem;
+    bottom: -50rem;
+    left: -30rem;
+    overflow: hidden;
+  }
+  .circle-light-blue  {
+    display: none;
+  }
+
+}
+
+
+.frontpage{
+  .page__content {
+    min-height: calc(100vh - 300px);
+  }
+
+  .circle-teal {
+    position: fixed;
+    width: 100rem;
+    height: 100rem;
+    bottom: -53rem;
+    left: -60rem;
+    overflow: hidden;
+
+  }
+  .circle-light-blue  {
+    position: fixed;
+    width: 50rem;
+    height: 50rem;
+    bottom: -13rem;
+    right: -5rem;
+    overflow: hidden;
+  }
+
+}

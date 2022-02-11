@@ -1,0 +1,73 @@
+{#
+/**
+ * @file
+ * Template for the main page.
+ */
+#}
+<div class="page position-relative">
+	{% embed '@dcrete/navbar/navbar.twig' with {
+    placement: '',
+    container: 'fixed',
+    color: 'light',
+    utility_classes: ['bg-trans'],
+  } %}
+
+		{% block branding %}
+			{% if page.navbar_branding %}
+				{{ page.navbar_branding }}
+			{% endif %}
+		{% endblock %}
+
+		{% block left %}
+			{% if page.navbar_left %}
+				<div class="mr-auto">
+					{{ page.navbar_left }}
+				</div>
+			{% endif %}
+		{% endblock %}
+
+		{% block right %}
+			{% if page.navbar_right %}
+				{{ page.navbar_right }}
+			{% endif %}
+		{% endblock %}
+	{% endembed %}
+
+	<main class="pt-5">
+		<a id="main-content" tabindex="-1"></a>
+		{# link is in html.html.twig #}
+
+		{% if page.header %}
+			<header class="page__header mb-3">
+				<div class="container">
+					{{ page.header }}
+				</div>
+			</header>
+		{% endif %}
+
+		{% if page.content %}
+			<div class="page__content">
+				<div class="container">
+					{{ page.content }}
+				</div>
+			</div>
+		{% endif %}
+	</main>
+
+	{% if page.footer %}
+    <div class="footer-divider"></div>
+		<footer class="page__footer py-4 px-0 px-md-5">
+			<div class="container">
+				<div class="d-flex justify-content-md-between align-items-md-center">
+					{{ page.footer }}
+				</div>
+			</div>
+		</footer>
+	{% endif %}
+
+<div class="big-circle circle-teal"></div>
+<div class="big-circle circle-light-blue"></div>
+
+</div>
+
+

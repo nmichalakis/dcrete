@@ -1,0 +1,105 @@
+//@mixin btn-gradient--default {
+//  box-shadow: 0px 3px 6px #00000029;
+//  padding: 10px 30px;
+//  //border: 5px solid;
+//  //border-image-slice: 1;
+//  //border-width: 5px;
+//  //border-image-source: linear-gradient(to right, $blue, $green);
+//  text-decoration: none !important;
+//  transition: background-color 1s;
+
+//  border-radius:20px; /*1*/
+//  border:10px solid transparent; /*2*/
+//  background:linear-gradient(45deg,$blue,$green) border-box; /*3*/
+//  -webkit-mask: /*4*/
+//  linear-gradient($blue 0 0) padding-box,
+//  linear-gradient($green 0 0);
+//  -webkit-mask-composite: xor; /*5'*/
+//      mask-composite: exclude; /*5*/
+
+//}
+//@mixin btn-gradient--active {
+//  background:linear-gradient(45deg,$blue,$green) border-box; /*3*/
+//  color: $white !important;
+//}
+
+//@mixin btn-gradient--invert {
+//  background: #FFFFFF 0% 0% no-repeat padding-box;
+//  box-shadow: inset 0px 3px 6px #00000029;
+//  @include gradient-text--default();
+//}
+@mixin gradient-text--default {
+    /* Fallback: Set a background color. */
+    background-color: $blue;
+    background: -webkit-linear-gradient(90deg, $blue, $green);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+//@mixin btn-gradient-text--unset(){
+//    //-webkit-background-clip: unset;
+//    -webkit-text-fill-color: $white;
+//    //-moz-background-clip: unset;
+//    //-moz-text-fill-color: ;
+//}
+
+
+@mixin btn-gradient--default() {
+  position: relative;
+  font-size: 24px;
+  background:
+  linear-gradient(to left, $green, $blue) padding-box,
+  linear-gradient(to left, $green, $blue) border-box;
+  color: $white !important;
+  border: 5px solid transparent !important;
+  border-radius:15px;
+  display:inline-block;
+  box-shadow: 0px 3px 6px #00000029;
+  border-width: 4px;
+  text-decoration: none;
+  height: auto !important;
+  padding: 8px 20px !important;
+  &:hover,
+  &:focus,
+  &:active {
+    text-decoration: none;
+    background:
+      linear-gradient($white, $white) padding-box,
+      linear-gradient(to right, $green, $blue) border-box;
+      border-radius:15px;
+      border: 4px solid transparent;
+      color: $blue !important;
+      padding: 8px 20px  !important;
+
+  }
+}
+
+
+@mixin btn-gradient--invert() {
+  font-size: 24px;
+  display:inline-block;
+  border: 4px solid transparent !important;
+  text-decoration: none;
+  height: auto !important;
+  box-shadow: 0px 3px 6px #00000029;
+  padding: 8px 20px  !important;
+  background:
+  linear-gradient($white, $white) padding-box,
+  linear-gradient(to right, $green, $blue) border-box;
+  border-radius:15px;
+  border: 4px solid transparent;
+  color: $blue !important;
+
+  &:hover,
+  &:focus,
+  &:active {
+    padding: 8px 20px !important;
+    text-decoration: none;
+  background:
+  linear-gradient(to left, $green, $blue) padding-box,
+  linear-gradient(to left, $green, $blue) border-box;
+  color: $white !important;
+  border: 5px solid transparent;
+  border-radius:15px;
+  }
+}

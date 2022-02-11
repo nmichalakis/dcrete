@@ -1,0 +1,115 @@
+body {
+  font-family: 'Roboto' , sans-serif;
+}
+
+
+// Headings
+// -----------------------------------------------------------------------------
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+}
+
+// Text
+// -----------------------------------------------------------------------------
+p {
+
+}
+
+// Links
+// -----------------------------------------------------------------------------
+a {
+
+  @include hover {
+
+  }
+}
+
+// Lists
+// -----------------------------------------------------------------------------
+ol,
+ul,
+dl {
+
+}
+
+// Image
+// -----------------------------------------------------------------------------
+img {
+
+}
+
+figure {
+
+}
+
+figcaption {
+
+}
+
+// Other
+// -----------------------------------------------------------------------------
+blockquote {
+
+}
+
+strong {
+
+}
+
+small {
+
+}
+
+.footer-divider {
+  height: 3px;
+  background: transparent linear-gradient(90deg, #627DE6 0%, #30BAA8 100%) 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 6px #00000029;
+}
+
+.border-bottom-fx {
+  height: 3px;
+  background: transparent linear-gradient(91deg, #627DE6 0%, #30BAA8 100%) 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 6px #00000029;
+  border-radius: 30px;
+  opacity: 1;
+}
+
+.rect-title {
+  background: transparent linear-gradient(103deg, #627DE6 0%, #30BAA8 100%) 0% 0% no-repeat padding-box;
+  border-radius: 3px 3px 0px 0px;
+  opacity: 0.15;
+}
+
+.rect-title--narrow {
+  width: 248px;
+  height: 25px;
+}
+.rect-title--wide {
+  width: 428px;
+  height: 25px;
+}
+
+.big-circle {
+  position: absolute;
+  overflow: hidden;
+  z-index: -12;
+  border-radius: 50%;
+  opacity: 0.07;
+}
+
+.circle-teal {
+  background: transparent linear-gradient(145deg, #627DE6 0%, #44E1BD 100%) 0% 0% no-repeat padding-box;
+}
+
+.circle-light-blue {
+    background: transparent linear-gradient(145deg, #627DE6 0%, #44E1BD 100%) 0% 0% no-repeat padding-box;
+}
+
+.gradient-text--default {
+  @include gradient-text--default();
+  text-decoration: underline;
+}
+
+.bg-trans {
+  background-color: transparent !important;
+}

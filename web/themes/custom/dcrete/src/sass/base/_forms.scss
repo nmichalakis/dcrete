@@ -1,0 +1,60 @@
+::-webkit-input-placeholder {
+   font-style: italic;
+}
+:-moz-placeholder {
+   font-style: italic;
+}
+::-moz-placeholder {
+   font-style: italic;
+}
+:-ms-input-placeholder {
+   font-style: italic;
+}
+.form-control {
+    border-radius: 15px;
+    font-size: 20px;
+    font-weight: lighter;
+    border: 1px solid #ADADB6;
+    color: #ADADB6;
+}
+.form-submit--gradient {
+  @include btn-gradient--default();
+}
+
+
+.form-item-pass-pass1 {
+
+  .password-strength {
+    display: none;
+  }
+
+}
+
+
+.form-item-pass-pass2 {
+  .password-confirm-message {
+    display: none;
+  }
+}
+
+.user-login-form,
+.user-register-form {
+  .form-submit {
+    max-width: 240px;
+  }
+}
+
+.user-login-form {
+  .form-submit {
+    margin: 80px 0 15px 0;
+  }
+}
+
+.form-item {
+  position: relative;
+  .pass-status--graphic {
+    position: absolute;
+    bottom: 8px;
+    right: -20px;
+  }
+}

@@ -1,0 +1,8 @@
+.btn-gradient {
+  @include btn-gradient--default();
+}
+
+.btn-gradient--invert {
+  @include btn-gradient--invert();
+}
+

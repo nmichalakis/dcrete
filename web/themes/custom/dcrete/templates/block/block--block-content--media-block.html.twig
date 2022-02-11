@@ -1,0 +1,61 @@
+{#
+/**
+ * @file
+ * Template for a Block component.
+ *
+ * Available config:
+ * - html_tag: The HTML tag for the block.
+ * - utility_classes: An array of utility classes.
+ */
+#}
+
+{% set html_tag = 'div' %}
+{% set classes = [
+  'block',
+  bundle ? 'block--' ~ bundle|clean_class,
+  id ? 'block--' ~ id|replace({"_": "-"})|clean_class,
+]|merge(utility_classes ? utility_classes : []) %}
+
+{% if html_tag %}
+	<{{html_tag}}{{attributes|without('id').addClass(classes)}}>
+	{% endif %}
+
+
+	<div class="row">
+
+		{% if content.field_block_layout.0['#markup'] == 'media_right' %}
+			<div class="col-xs-12 col-md-6">
+				{{ title_prefix }}
+				<h2{{title_attributes.addClass('position-relative')}}>{{ label }}
+					<span class="rect-title rect-title--wide position-absolute"></span>
+				</h2>
+				{{ title_suffix }}
+				{{ content.body }}
+			</div>
+			<div class="col-xs-12 col-md-6">
+				{{ content.field_media }}
+				<div class="border-bottom-fx mt-4"></div>
+			</div>
+		{% else %}
+			<div class="col-xs-12 col-md-6">
+				{{ content.field_media }}
+				<div class="border-bottom-fx mt-4"></div>
+			</div>
+			<div class="col-xs-12 col-md-6">
+				{{ title_prefix }}
+				<h2{{title_attributes.addClass('position-relative')}}>{{ label }}
+					<span class="rect-title rect-title--narrow position-absolute"></span>
+				</h2>
+
+
+				{{ title_suffix }}
+				{{ content.body }}
+			</div>
+
+		{% endif %}
+	</div>
+
+
+	{% if html_tag %}
+	</{{html_tag}}>
+{% endif %}

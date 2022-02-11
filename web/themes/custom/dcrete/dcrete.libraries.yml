@@ -1,0 +1,10 @@
+style:
+  version: VERSION
+  css:
+    theme:
+      assets/css/dcrete.style.css: {}
+  js:
+    assets/js/dcrete.script.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
